@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IPL LIVE</title>
+<script src="https://content.jwplatform.com/libraries/KB5zFt7A.js"></script>
+<style>
+  body {
+    background-color: rgb(144, 225, 245);
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Change color of control buttons */
+  .jw-icon {
+    color: rgb(107, 205, 251) !important;
+  }
+
+  .jw-progress {
+    background-color: rgb(101, 255, 106) !important;
+  }
+  
+  #telegramButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 388px;
+    height: 50px;
+    background: linear-gradient(90deg, rgb(105, 255, 92), rgb(85, 190, 255));
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    animation: flowAnimation 2s infinite;
+  }
+
+  @keyframes flowAnimation {
+    0% {
+      background-position: -200px 0;
+    }
+    100% {
+      background-position: 200px 0;
+      }
+  }
+
+  #telegramButton:hover {
+    animation: none; /* Pause animation on hover */
+    background: linear-gradient(90deg, rgb(90, 229, 132), rgb(73, 214, 106)); /* Change animation color to red */
+  }
+</style>
+</head>
+<body>
+<div id="video"></div>
+
+<script type="text/javascript">
+  jwplayer("video").setup({
+    width: "100%",
+    height: "100%",
+    autostart: true,
+    mute: false,
+    file:"add_your_link_here"
+  });
+</script>
+<script>
+if(confirm("Join Our Telegram Channel")) { window.location.href = "https://t.me/+TBdk61slAY1mY2Q1" }
+</script>
+<div id="telegramButton" onclick="redirectToTelegram()">
+  Join Telegram
+</div>
+<script>
+function redirectToTelegram() {
+  // Your redirect code here
+  window.location.href = 'https://t.me/+TBdk61slAY1mY2Q1';
+}
+</script>
+</body>
+  </html>
